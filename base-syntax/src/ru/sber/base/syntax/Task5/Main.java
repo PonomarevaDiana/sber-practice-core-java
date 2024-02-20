@@ -12,15 +12,11 @@ public class Main {
             if (n>=2 && n<=100) {
                 a = 1;
                 b = 1;
-                System.out.print(a);
-                System.out.print(" ");
-                System.out.print(b);
-                System.out.print(" ");
+                System.out.print(a + " "+ b + " ");
                 for (int i = 0; i<n-2; i++){
                     c = b;
                     b = a + b;
-                    System.out.print(b);
-                    System.out.print(" ");
+                    System.out.print(b + " ");
                     a = c;
                 }
             }
@@ -29,5 +25,4 @@ public class Main {
             }
         }
     }
-
 }
