@@ -9,14 +9,11 @@ public class Main {
             if (n>=1 && n<=500){
                 for (int i=0; i<n; i++){
                     int a = 7*(i+1) ;
-                    System.out.print(a);
-                    System.out.print(" ");
+                    System.out.print(a + " ");
                 }
             }
             else {
-                System.out.print(" Введено недопустимое число ");
-                System.out.print(n);
-                System.out.println(". Допустимый диапазон значений: 1 - 500");
+                System.out.print(" Введено недопустимое число " + n + ". Допустимый диапазон значений: 1 - 500");
             }
         }
     }
