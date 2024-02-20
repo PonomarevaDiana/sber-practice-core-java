@@ -6,18 +6,19 @@ public class Main {
         public static void main(String[] args){
             Scanner sc = new Scanner(System.in);
             Random r = new Random();
-            char Simbol = (char)(r.nextInt(26) + 'A');
-            System.out.print(Simbol);
+            char simbol = (char)(r.nextInt(26) + 'A');
+            System.out.print(simbol);
             char as = sc.next().charAt(0);
             do {
                 if (((int)('A')<=(int)as && (int)as<=(int)('Z')) || ((int)('a')<=(int)as && (int)as<=(int)('z'))) {
                     if ((int)as>=(int)('a')){
                         as = (char) (as + (int)('A')-(int)('a'));
                     }
-                    if (as == Simbol) {
+                    if ((int)as == (int)simbol) {
                         System.out.print("Верно!");
+                        break;
                     }
-                    else if ((int)as<(int)Simbol){
+                    else if ((int)as<(int)simbol){
                         System.out.print("Ищи букву, которая после нее в алфавите");
                     }
                     else{
@@ -27,11 +28,8 @@ public class Main {
                 else {
                     System.out.print("Введен недопустимый символ");
                 }
-                if (as==Simbol) {
-                    break;
-                }
-                    as = sc.next().charAt(0);
-            } while (as != Simbol);
+                as = sc.next().charAt(0);
+            } while (true);
         }
     }
 }
