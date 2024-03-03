@@ -10,7 +10,6 @@ public class Main {
         char simbol = (char) (r.nextInt(26) + 'A');
         System.out.println("Загаданный символ: " + simbol);
         char as;
-        String s;
         do {
             System.out.println("Введите символ в строку ниже: ");
             as=sc.nextLine().toUpperCase().charAt(0);
@@ -26,6 +25,6 @@ public class Main {
             } else {
                 System.out.println("Введен недопустимый символ");
             }
-        } while (true);
+        }  while (true);
     }
 }
