@@ -8,24 +8,23 @@ public class Main {
         Scanner sc = new Scanner(System.in);
         Random r = new Random();
         char simbol = (char) (r.nextInt(26) + 'A');
-        System.out.print(simbol);
+        System.out.println("Загаданный символ: " + simbol);
         char as;
+        String s;
         do {
-            as = sc.next().charAt(0);
-            if ('A' <= as && as <= 'Z' || 'a' <= as && as <= 'z') {
-                if (as >= 'a') {
-                    as = (char) (as + (int) ('A') - (int) ('a'));
-                }
+            System.out.println("Введите символ в строку ниже: ");
+            as=sc.nextLine().toUpperCase().charAt(0);
+            if ('A' <= as && as <= 'Z') {
                 if (as == simbol) {
-                    System.out.print("Верно!");
+                    System.out.println("Верно!");
                     break;
                 } else if (as < simbol) {
-                    System.out.print("Ищи букву, которая после нее в алфавите");
+                    System.out.println("Ищи букву, которая после нее в алфавите");
                 } else {
-                    System.out.print("Ищи букву, которая до нее в алфавите");
+                    System.out.println("Ищи букву, которая до нее в алфавите");
                 }
             } else {
-                System.out.print("Введен недопустимый символ");
+                System.out.println("Введен недопустимый символ");
             }
         } while (true);
     }
